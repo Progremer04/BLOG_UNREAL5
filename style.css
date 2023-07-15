@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    border-radius: 50px;
+    background: #250e13;
+    box-shadow:  -25px 25px 10px #1f0c10,
+                 25px -25px 10px #2b1016;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    /* background-color: rgba(0, 0, 255, 0.8);
+    #6D6D6D #4F4F4F #1E1E1E #525252 #767676 */
+    background-color: #574145;
+}
+
+.nav div.logo {
+    width: 280px;
+    height: 10px;
+    position: absolute;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav div.logo a:hover {
+    background: #5d2833;
+box-shadow:  -25px 25px 10px #251014,
+             25px -25px 10px #954052;
+}
+.nav div.logo {
+    width: 400px;
+    height: 65px;
+    float: left;
+}
+
+.nav div.logo ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+}
+
+.nav div.logo ul li {
+    width: 120px;
+    height: 65px;
+}
+
+.nav div.logo ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+
+.nav div.logo ul li a:hover {
+   background: #5d2833;
+box-shadow:  -25px 25px 10px #251014,
+             25px -25px 10px #954052;
+}
+
+
+
+
+.nav div.main_list {
+    width: 600px;
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+}
+
+.nav div.main_list ul li {
+    width: 120px;
+    height: 65px;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #c0c0c0;
+}
+
+.nav div.media_button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    display: none;
+}
+
+.nav div.media_button button.main_media_button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    ;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span {
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1) {
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2) {
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3) {
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 20deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -20deg);
+}
+
+
+/* Home section */
+
+.home {
+    display: flex;
+    position: static;
+    flex-direction: column;
+    padding: 0;
+    /* margin-bottom: 300%; */
+    width: 100%;
+    height: 100vh;
+    background-color: #250E13;
+}
+
+
+/* Medai qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        margin: 0;
+    }
+
+    .nav div.logo {
+        margin-left: 15px;
+    }
+
+    .nav div.main_list {
+        width: 100%;
+        margin-top: 65px;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    .nav div.show_list {
+        height: 200px;
+    }
+
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        top: 80px;
+        right: 0;
+        left: 0;
+    }
+
+    .nav div.main_list ul li {
+        width: 100%;
+        height: 40px;
+        background-color: #222831;
+    }
+
+    .nav div.main_list ul li a {
+        text-align: center;
+        line-height: 40px;
+        width: 100%;
+        height: 40px;
+        display: table;
+    }
+
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+/*home setting*/
+.card {
+    border-radius: 2px;
+    background: #250E13;
+    width: 80%;
+    height: auto;
+    margin: 50px auto;
+    overflow: visible;
+
+}
+
+.card-header {
+    background: #FFE3EC;
+    color: linear-gradient(145deg, #261216, #2d151a);
+    ;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-header h2 {
+    margin-top: 0;
+}
+
+.card-header .s {
+    color: linear-gradient(145deg, #553e43, #654a4f);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body p {
+    color: #fff;
+}
+.list_games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .game_profile {
+    width: 300px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #001815, #001d19);
+    box-shadow:  25px 25px 100px #001714,
+                 -25px -25px 100px #001f1a;
+        
+
+}
+  
+  .game_profile .title {
+    background: #FFE3EC;
+    color: linear-gradient(145deg, #261216, #2d151a);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .game_profile .title h3 {
+    margin-top: 0;
+  }
+  
+  .game_profile .trailer {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .game_profile iframe {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .game_profile iframe:hover {
+    transform: scale(1.1);
+  }
+  
+  .game_profile .info-about-games {
+    color: #C3FCF1;
+    padding: 20px;
+    text-align: center;
+
+  }
